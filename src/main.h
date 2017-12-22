@@ -32,7 +32,7 @@ static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
 static const unsigned int MAX_INV_SZ = 50000;
 static const int64 MIN_TX_FEE = 0.1 * CENT;
 static const int64 MIN_RELAY_TX_FEE = 0.1 * CENT;
-static const int64 MAX_MONEY = 47433600 * COIN;
+static const int64 MAX_MONEY = 474336000 * COIN;
 static const int64 MAX_MINT_PROOF_OF_WORK = 10 * COIN;
 static const int64 MAX_MINT_PROOF_OF_WORK_LEGACY = 10 * COIN;
 static const int64 MAX_MINT_PROOF_OF_STAKE = 1 * CENT;
@@ -42,7 +42,7 @@ static const unsigned int VERSION2_SWITCH_TIME = 1404457454; // Fri, 04 Jul 2014
 
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 /** Split/Combine Threshold Max */
-static const int64 MAX_SPLIT_AMOUNT = 200 * COIN;
+static const int64 MAX_SPLIT_AMOUNT = 2000 * COIN;
 static const int64 MAX_COMBINE_AMOUNT = MAX_SPLIT_AMOUNT * 2;
 
 static const unsigned int PROTOCOL_SWITCH_TIME = 1371686400; // 20 Jun 2013 00:00:00
