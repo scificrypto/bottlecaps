@@ -42,8 +42,8 @@ static const unsigned int VERSION2_SWITCH_TIME = 1404457454; // Fri, 04 Jul 2014
 
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 /** Split/Combine Threshold Max */
-static const int64 MAX_SPLIT_AMOUNT = 2000 * COIN;
-static const int64 MAX_COMBINE_AMOUNT = MAX_SPLIT_AMOUNT * 2;
+static const int64 MAX_SPLIT_AMOUNT = 5000 * COIN;
+static const int64 MAX_COMBINE_AMOUNT = 2000 * COIN;
 
 static const unsigned int PROTOCOL_SWITCH_TIME = 1371686400; // 20 Jun 2013 00:00:00
 
