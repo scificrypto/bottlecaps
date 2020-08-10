@@ -167,6 +167,11 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     frameBlocksLayout->addStretch();
     frameBlocksLayout->addWidget(labelBlocksIcon);
     frameBlocksLayout->addStretch();
+    
+    // Add timer to update minting info
+    QTimer *timerMintingIcon = new QTimer(labelStakingIcon);
+    timerMintingIcon->start(60 * 1000);
+    connect(timerMintingIcon, SIGNAL(timeout()), this, SLOT(updateStakingIcon())); 
 
     // Progress bar and label for blocks download
     progressBarLabel = new QLabel();
@@ -494,7 +499,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 
         setNumBlocks(clientModel->getNumBlocks(), clientModel->getNumBlocksOfPeers());
         connect(clientModel, SIGNAL(numBlocksChanged(int,int)), this, SLOT(setNumBlocks(int,int)));
-        connect(clientModel, SIGNAL(numBlocksChanged(int,int)), this, SLOT(updateStakingIcon()));
+        //connect(clientModel, SIGNAL(numBlocksChanged(int,int)), this, SLOT(updateStakingIcon()));
 
         // Report errors from network/worker thread
         connect(clientModel, SIGNAL(message(QString,QString,unsigned int)), this, SLOT(message(QString,QString,unsigned int)));
