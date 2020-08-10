@@ -311,6 +311,7 @@ static const CRPCCommand vRPCCommands[] =
     { "resendtx",               &resendtx,               false,  true  },
     { "makekeypair",            &makekeypair,            false,  true  },
     { "autosavings",            &autosavings,            false,  false },
+    { "rescanfromblock",        &rescanfromblock,        false,  false },
     { "sendalert",              &sendalert,              false,  false },
 };
 
@@ -1240,6 +1241,7 @@ Array RPCConvertValues(const std::string &strMethod, const std::vector<std::stri
     if (strMethod == "autosavings"            && n > 1) ConvertTo<int>(params[1]);
     if (strMethod == "autosavings"            && n > 3) ConvertTo<double>(params[3]);
     if (strMethod == "autosavings"            && n > 3) ConvertTo<double>(params[4]);
+    if (strMethod == "rescanfromblock"        && n > 0) ConvertTo<int>(params[0]);
 
     return params;
 }
