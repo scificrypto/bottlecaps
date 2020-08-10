@@ -16,11 +16,11 @@
     </message>
     <message>
         <location line="+41"/>
-        <source>Copyright © 2009-2012 The BottleCaps developers</source>
-        <translation>Все права защищены © 2009-2012 Разработчики BottleCaps</translation>
+        <source>Copyright © 2009-2020 The BottleCaps developers</source>
+        <translation>Все права защищены © 2009-2020 Разработчики BottleCaps</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>
 This is experimental software.
 
